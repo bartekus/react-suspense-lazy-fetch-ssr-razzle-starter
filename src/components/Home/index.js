@@ -1,13 +1,11 @@
-import React, { Fragment, Suspense } from 'react';
+import React, { Suspense } from 'react';
+import { lazy } from '@loadable/component';
 
-import useFetch from '../../hooks/useFetch';
 import logo from './react.svg';
 import './style.css';
 
-const FetchingComponent = () => {
-  const response = useFetch('https://jsonplaceholder.typicode.com/todos');
-  return <p>The server responded with: {JSON.stringify(response)}</p>;
-};
+const FetchingCommentsComponent = lazy(() => import('../FetchingCommentsComponent'));
+const FetchingTodosComponent = lazy(() => import('../FetchingTodosComponent'));
 
 const Home = () => {
   return (
@@ -31,11 +29,12 @@ const Home = () => {
           <a href="https://palmer.chat">Community Slack</a>
         </li>
       </ul>
-      <Fragment>
-        <Suspense fallback="Loading...">
-          <FetchingComponent />
-        </Suspense>
-      </Fragment>
+      <Suspense fallback="Loading...">
+        <FetchingCommentsComponent />
+      </Suspense>
+      <Suspense fallback="Loading...">
+        <FetchingTodosComponent />
+      </Suspense>
     </div>
   );
 };

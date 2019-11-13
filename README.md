@@ -16,6 +16,10 @@ Universal JavaScript applications are tough to setup. Either you buy into a fram
 * Escape hatches for customization via `.babelrc` and `razzle.config.js`
 * [Jest](https://github.com/facebook/jest) test runner setup with sensible defaults via `razzle test`
 
+Plus
+* Suspense `react-lightyear` & lazy-loading `loadable-components`
+* useFetch hook that works with the above mentioned suspense & lazy-loading
+
 ## Quick Start
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/jaredpalmer/razzle.svg)](https://greenkeeper.io/)
