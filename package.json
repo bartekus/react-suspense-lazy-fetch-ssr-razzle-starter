@@ -11,7 +11,7 @@
   "dependencies": {
     "@loadable/component": "5.10.3",
     "deep-equal": "1.1.1",
-    "express": "4.17.1",
+    "express": "4.18.2",
     "isomorphic-fetch": "2.2.1",
     "razzle": "4.2.18",
     "react": "16.11.0",
